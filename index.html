@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<script type="text/javascript"> 
+function display_c(){
+var refresh=1000; // Refresh rate in milli seconds
+mytime=setTimeout('display_ct()',refresh)
+}
+
+function display_ct() {
+var x = new Date()
+var x1=x.getMonth() + 1+ "/" + x.getDate() + "/" + x.getFullYear(); 
+x1 = x1 + " - " +  x.getHours( )+ ":" +  x.getMinutes() + ":" +  x.getSeconds();
+document.getElementById('ct').innerHTML = x1;
+display_c();
+ }
+</script>
+<style type="text/css">
+	*
+	{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	body
+	{
+		background-color: #2B6665;
+	}
+	.TOP
+	{
+		background-color: black;
+		height: 60px;
+		color: white;
+		font-size: 30px;
+		width: 100%;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	.company-name
+	{
+		width: 100%;
+		text-align: center;
+		color: white;
+		border-style: dashed;
+	}
+	.login-text
+	{
+		width: 100%;
+		text-align: center;
+		color: white;
+		margin-top: 40px;
+
+	}
+	#input-spacing
+	{
+		border-style: double;
+		width: 40%;
+	}
+	#vertical-spacing
+	{
+		margin-top: 10px;
+	}
+	form
+	{
+		width: 100%;
+		text-align: center;
+	}
+	#element-border
+	{
+		width: 40%;
+		border-style: dashed;
+		margin: auto;
+	}
+	#submit-button
+	{
+		background-color: gray;
+		color: black;
+		width: 40%;
+		font-size: 20px;
+		border: 1px solid white;
+	}
+</style>
+<body onload=display_ct();>
+	<div class="TOP">
+		<span id='ct' ></span>
+	</div>
+	<div class="company-name">
+		<h1><i>Scents de Xara</i></h1>
+	</div>
+	<div class="login-text">
+		<h1 id="element-border">Log In</h1>
+	</div>
+	<form>
+		<div ><h3 id="vertical-spacing"><i>USERNAME:</i></h3></div>
+		<div ><input id="input-spacing" type="text" name="" value=""></div>
+		<div ><h3 id="vertical-spacing"><i>PASSWORD:</i></h3></div>
+		<div ><input id="input-spacing" type="text" name="" value=""></div>
+		<div id="vertical-spacing"><a href="dashboard.html"><input id="submit-button" type="submit" name="" value="login"></a></div>
+	</form>
+
+
+</body>
+</html>
